@@ -1,4 +1,4 @@
-let A = '41.254&21'
+let A = '8.&8'
 
 let str = ""
 let bar = ""
