@@ -21,6 +21,8 @@ class Node {
 
 // ====================================== END ==========================================
 
+// ================================ARRAY TO LINKED LIST ================================
+
 const arrToLL = (arr,node)=>{
     let i = 1
     while(i < arr.length){
@@ -30,8 +32,30 @@ const arrToLL = (arr,node)=>{
     }
 }
 
+
+// =====================================================================================
+
+// =============================== PRINT LINKED LIST =================================
+
+
+const printLL = (node) =>{
+    let str = ""
+    current = node
+    while(current.next != null){
+        str += current.data
+        str += " => "
+        current = current.next
+    }
+    str += current.data
+    return str
+}
+
+
+// =====================================================================================
+
 A = new Node(arr[0]);
 arrToLL(arr,A)
+
 // ===================================== Here A IS A LINKED LIST =========================
 
 console.log(A)

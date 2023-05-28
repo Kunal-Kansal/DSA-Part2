@@ -38,7 +38,23 @@ const intersectionSort = (node) => { // 2 4 6 1 4
     }
     return solve
 }
+// =============================== PRINT LINKED LIST =================================
 
+
+const printLL = (node) =>{
+    let str = ""
+    current = node
+    while(current.next != null){
+        str += current.data
+        str += " => "
+        current = current.next
+    }
+    str += current.data
+    return str
+}
+
+
+// =====================================================================================
 const arrToLL = (arr, node) => {
     let i = 1
     while (i < arr.length) {
@@ -52,5 +68,6 @@ A = new Node(arr[0]);
 
 arrToLL(arr, A)
 let ans = intersectionSort(A)
-return ans
-console.log(ans)
+// return ans
+// console.log(ans)
+console.log(printLL(ans))
